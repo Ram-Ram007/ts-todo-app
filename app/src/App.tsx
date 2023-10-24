@@ -4,6 +4,7 @@ import { ITodo } from "./types";
 
 import TodoList from "./components/TodoList";
 import AddTodo from "./components/AddTodo";
+import "./App.css";
 
 function App() {
   const [todos, setTodos] = useState<ITodo[]>([]);
