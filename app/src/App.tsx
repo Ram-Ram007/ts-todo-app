@@ -43,7 +43,7 @@ function App() {
   }
   return (
     <div>
-      <h1>my todos</h1>
+      <h1>My Todos</h1>
       <AddTodo onTodoAdd={onTodoAdd} />
       <TodoList
         todos={todos}

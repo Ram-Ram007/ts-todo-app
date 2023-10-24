@@ -28,7 +28,7 @@ const TodoList: React.FC<ITodoList> = ({
               <input type="checkbox" />
               {t.text}
               <button onClick={() => handleDelete(t.id)}>delete</button>
-              <button onClick={() => handleUpdate(t.id)}>Update</button>
+              <button onClick={() => handleUpdate(t.id)}>Edit</button>
             </p>
           )}
         </div>
