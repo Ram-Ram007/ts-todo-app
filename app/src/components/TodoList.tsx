@@ -6,6 +6,7 @@ interface ITodoList {
   handleDelete: (num: Number) => void;
   handleUpdate: (num: Number) => void;
   handleSaveClick: (num: Number, t: string) => void;
+  setTodos: (updatedItems: ITodo[]) => void;
 }
 
 const TodoList: React.FC<ITodoList> = ({
@@ -14,8 +15,21 @@ const TodoList: React.FC<ITodoList> = ({
   handleDelete,
   handleUpdate,
   handleSaveClick,
-  
+  setTodos,
 }) => {
+  const handleCheckboxChange = (id: Number) => {
+    const updatedItems = todos.map((t) => {
+      if (t.id === id) {
+        return {
+          ...t,
+          isCompleted: !t.isCompleted,
+        };
+      }
+      return t;
+    });
+    setTodos(updatedItems);
+  };
+
   return (
     <div className={extraCss}>
       {todos.map((t) => (
@@ -25,8 +39,12 @@ const TodoList: React.FC<ITodoList> = ({
               <EditForm item={t} handleSaveClick={handleSaveClick} />
             </>
           ) : (
-            <p>
-              <input type="checkbox" />
+            <p className={t.isCompleted ? 'strikethrough' : ''}>
+              <input
+                type="checkbox"
+                checked={t.isCompleted}
+                onChange={() => handleCheckboxChange(t.id)}
+              />
               {t.text}
               <button onClick={() => handleDelete(t.id)}>delete</button>
               <button onClick={() => handleUpdate(t.id)}>Edit</button>

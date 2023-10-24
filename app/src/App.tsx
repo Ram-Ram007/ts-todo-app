@@ -14,6 +14,7 @@ function App() {
       text: str,
       id: new Date().getTime(),
       isEdit: false,
+      
     };
     setTodos((prev) => [...prev, obj]);
   }
@@ -47,10 +48,12 @@ function App() {
       <h1>My Todos</h1>
       <AddTodo onTodoAdd={onTodoAdd} />
       <TodoList
+        
         todos={todos}
         handleDelete={handleDelete}
         handleUpdate={handleUpdate}
         handleSaveClick={handleSaveClick}
+        setTodos={setTodos}
         extraCss="text-bold"
       />
     </div>
