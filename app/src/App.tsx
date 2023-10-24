@@ -14,7 +14,7 @@ function App() {
       text: str,
       id: new Date().getTime(),
       isEdit: false,
-      isCompleted:false,
+      isCompleted:false,//strike
     };
     setTodos((prev) => [...prev, obj]);
   }
@@ -53,7 +53,7 @@ function App() {
         handleDelete={handleDelete}
         handleUpdate={handleUpdate}
         handleSaveClick={handleSaveClick}
-        setTodos={setTodos}
+        setTodos={setTodos}//strike
         extraCss="text-bold"
       />
     </div>

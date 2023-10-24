@@ -6,7 +6,7 @@ interface ITodoList {
   handleDelete: (num: Number) => void;
   handleUpdate: (num: Number) => void;
   handleSaveClick: (num: Number, t: string) => void;
-  setTodos: (updatedItems: ITodo[]) => void;
+  setTodos: (updatedItems: ITodo[]) => void;//strike
 }
 
 const TodoList: React.FC<ITodoList> = ({
@@ -15,7 +15,7 @@ const TodoList: React.FC<ITodoList> = ({
   handleDelete,
   handleUpdate,
   handleSaveClick,
-  setTodos,
+  setTodos,//strike
 }) => {
   const handleCheckboxChange = (id: Number) => {
     const updatedItems = todos.map((t) => {
@@ -44,7 +44,7 @@ const TodoList: React.FC<ITodoList> = ({
               <input
                 type="checkbox"
                 checked={t.isCompleted}
-                onChange={() => handleCheckboxChange(t.id)}
+                onChange={() => handleCheckboxChange(t.id)}//strike
               />
               {t.text}
               <button onClick={() => handleDelete(t.id)}>delete</button>
