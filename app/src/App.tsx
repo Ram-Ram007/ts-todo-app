@@ -14,7 +14,7 @@ function App() {
       text: str,
       id: new Date().getTime(),
       isEdit: false,
-      
+      isCompleted:false,
     };
     setTodos((prev) => [...prev, obj]);
   }
