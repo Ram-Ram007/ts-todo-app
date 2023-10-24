@@ -1,7 +1,7 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-align: center;
-  background-color: beige;
+  background-color: rgb(41, 160, 179);
   padding: 20px;
 }
 
@@ -38,9 +38,7 @@ button {
   transition: background-color 0.2s;
   gap: 2px;
 }
-button:hover {
-  background-color: red;
-}
+
 
 .text-bold {
   font-weight: bold;
@@ -52,4 +50,7 @@ button:hover {
 
 .strikethrough {
   text-decoration: line-through;
+}
+.add{
+  margin-top: 20px;
 }
