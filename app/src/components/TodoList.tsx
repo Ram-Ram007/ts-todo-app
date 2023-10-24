@@ -39,6 +39,7 @@ const TodoList: React.FC<ITodoList> = ({
               <EditForm item={t} handleSaveClick={handleSaveClick} />
             </>
           ) : (
+            <div className="total">
             <p className={t.isCompleted ? 'strikethrough' : ''}>
               <input
                 type="checkbox"
@@ -49,6 +50,7 @@ const TodoList: React.FC<ITodoList> = ({
               <button onClick={() => handleDelete(t.id)}>delete</button>
               <button onClick={() => handleUpdate(t.id)}>Edit</button>
             </p>
+            </div>
           )}
         </div>
       ))}

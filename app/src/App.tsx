@@ -44,7 +44,7 @@ function App() {
     setTodos(updatedItems);
   }
   return (
-    <div>
+    <div className="app">
       <h1>My Todos</h1>
       <AddTodo onTodoAdd={onTodoAdd} />
       <TodoList
