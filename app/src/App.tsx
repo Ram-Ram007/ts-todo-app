@@ -6,9 +6,6 @@ import TodoList from "./components/TodoList";
 import AddTodo from "./components/AddTodo";
 import "./App.css";
 
-import 'bulma/css/bulma.min.css';
-
-
 function App() {
   const [todos, setTodos] = useState<ITodo[]>([]);
 
@@ -48,7 +45,7 @@ function App() {
   }
   return (
     <div>
-      <h1 className="title">My Todos</h1>
+      <h1>My Todos</h1>
       <AddTodo onTodoAdd={onTodoAdd} />
       <TodoList
         
