@@ -20,7 +20,7 @@ function App() {
   }
   function handleDelete(id: Number) {
     const filtered = todos.filter((t) => t.id != id);
-    console.log(filtered);
+   
     setTodos(filtered);
   }
 
