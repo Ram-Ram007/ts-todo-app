@@ -8,7 +8,7 @@ interface ICard {
 const Card: React.FC<ICard> = ({ handleSaveClick, item }) => {
   const [updatedTitle, setUpdatedTitle] = useState(item.text);
   return (
-    <div className="card">
+    <form className="card">
       <input
         type="text"
         value={updatedTitle}
@@ -17,7 +17,7 @@ const Card: React.FC<ICard> = ({ handleSaveClick, item }) => {
       <button onClick={() => handleSaveClick(item.id, updatedTitle)}>
         Save
       </button>
-    </div>
+    </form>
   );
 };
 
