@@ -16,7 +16,7 @@ const AddTodo: React.FC<IAddTodo> = ({ onTodoAdd }) => {
       return;
     }
 
-    if (text.length > 10) {
+    if (text.length > 20) {
       alert("Input cannot be longer than 10 characters.");
       return;
     }
