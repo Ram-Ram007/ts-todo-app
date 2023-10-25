@@ -9,7 +9,7 @@ const AddTodo: React.FC<IAddTodo> = ({ onTodoAdd }) => {
   
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-   
+    e.preventDefault();
 
    
 
