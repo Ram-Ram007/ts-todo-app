@@ -11,10 +11,7 @@ const AddTodo: React.FC<IAddTodo> = ({ onTodoAdd }) => {
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
-    if (text.length < 1) {
-      alert("Input must be at least 1 character long.");
-      return;
-    }
+   
 
     
 
