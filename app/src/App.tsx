@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 import { ITodo } from "./types";
 
@@ -8,6 +8,16 @@ import "./App.css";
 
 function App() {
   const [todos, setTodos] = useState<ITodo[]>([]);
+
+  useEffect(() => {
+    // Load to-do items from local storage
+    const savedTodos = localStorage.getItem("todos");
+    if (savedTodos) {
+      setTodos(JSON.parse(savedTodos));
+    }
+  }, []);
+
+
 
   function onTodoAdd(str: string) {
     const obj: ITodo = {
@@ -43,6 +53,12 @@ function App() {
     };
     setTodos(updatedItems);
   }
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+    console.log("Saved todos to local storage:", todos);
+  }, [todos]);
+
   return (
     <div className="app">
       <h1>My Todos</h1>
